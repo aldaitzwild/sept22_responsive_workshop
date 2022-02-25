@@ -2,13 +2,8 @@
     box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
-}
 
 body {
-    display: flex;
-    flex-direction: column;
     margin: 0;
     line-height: 1.5;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -17,14 +12,9 @@ body {
 
 /* navigation */
 nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
+    padding: .5rem;
     background-color: #f76c6c;
     color: white;
-    box-shadow: -2px 5px 10px rgb(0 0 0 / 20%);
-    z-index: 10;
 }
 
 nav h1 {
@@ -51,17 +41,13 @@ nav>ul>li>a {
     padding: .25rem;
     text-decoration: none;
     color: #fff;
-    white-space: nowrap;
 }
 
 
 /* header */
 header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    min-height: 30vh;
+    text-align: center;
+    min-height: 25vh;
     background-image: url("https://picsum.photos/id/1020/1920/600");
     background-repeat: no-repeat;
     background-size: cover;
@@ -72,30 +58,27 @@ header {
 
 header h1 {
     font-size: 3rem;
-    filter: drop-shadow(2px 2px 6px #000);
 }
 
-/*main*/
-main {
-    display: grid;
-    grid-template-columns: 1fr min(65ch, 100%) 1fr;
-}
-
-main>* {
-    grid-column: 2;
+section {
     padding: .5rem;
+    margin: 0 auto;
+    max-width: 65ch;
 }
 
-/* section */
-section.full-bleed {
-    grid-column: 1 / -1;
+section>article {
+    display: inline-block;
+    padding: .5rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    width: 45%;
+    border-radius: .5rem;
     background-color: #fff;
+    box-shadow: -2px 5px 10px rgb(0 0 0 / 20%);
 }
-
 
 /*footer*/
 footer {
-    margin-top: auto;
     padding: 1rem;
     background-color: #f76c6c;
 }
